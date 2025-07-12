@@ -3,94 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajyalakshmi Chennuboyina - Frontend Developer</title>
+    <title>Rajyalakshmi Chennuboyina - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">RC</span>
+            <div class="nav-logo">Rajyalakshmi</div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">
-          <span class="greeting">Hello, I'm</span>
-          <span class="name">Rajyalakshmi Chennuboyina</span>
-        </h1>
-        <p class="hero-subtitle"> Software Developer | Frontend Developer | MERN Stack Enthusiast </p>
-
-         <div class="hero-buttons">
-        <a href="#contact" class="nav-menu btn btn-primary">Hire Me <b><i class="fas fa-arrow-down"></i></b></a>
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="particles"></div>
         </div>
-    </div>
-
-      <!-- Profile Image -->
-      <div class="hero-image">
-        <div class="profile-picture">
-          <img src="assets/Profile_pic.png" alt="Profile Picture" />
+        <div class="hero-content">
+            <div class="profile-picture">
+                <div class="profile-inner">R</div>
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">Rajyalakshmi</span>
+                <br>
+                <span class="hero-subtitle">Chennuboyina</span>
+            </h1>
+            <p class="hero-description">MERN Stack Enthusiast & Python Programmer</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="downloadResume()">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                    <i class="fas fa-envelope"></i>
+                    Contact Me
+                </button>
+            </div>
+            <div class="scroll-indicator" onclick="scrollToSection('about')">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Background Particles -->
-    <div class="hero-bg">
-      <div class="particle" style="--i: 1;"></div>
-      <div class="particle" style="--i: 2;"></div>
-      <div class="particle" style="--i: 3;"></div>
-      <div class="particle" style="--i: 4;"></div>
-      <div class="particle" style="--i: 5;"></div>
-      <div class="particle" style="--i: 6;"></div>
-      <div class="particle" style="--i: 7;"></div>
-      <div class="particle" style="--i: 8;"></div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm Rajyalakshmi Chennuboyina, a passionate frontend developer and MERN stack enthusiast.
-I specialize in building responsive, accessible web applications using React.js, Node.js, Express, and MongoDB.
-With a strong command of HTML, CSS, JavaScript, and Python, I create clean, maintainable code.</p>
-<p>I enjoy crafting seamless user experiences that combine performance with design.
-I'm always eager to learn new technologies and take on impactful, real-world projects.</p>
-
-
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="about-content glass-card">
+                <p>
+                    I'm <span class="highlight">Rajyalakshmi Chennuboyina</span>, a passionate frontend developer and MERN stack enthusiast.
+                    I specialize in building responsive, accessible web applications using React.js, Node.js, Express, and MongoDB.
+                    With a strong command of HTML, CSS, JavaScript, and Python, I create clean, maintainable code.
+                    I enjoy crafting seamless user experiences that combine performance with design.
+                    I'm always eager to learn new technologies and take on impactful, real-world projects.
+                </p>
             </div>
         </div>
     </section>
@@ -98,82 +85,71 @@ I'm always eager to learn new technologies and take on impactful, real-world pro
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title">Skills & <span class="gradient-text">Tools</span></h2>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="Advanced">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item" data-level="Advanced">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item" data-level="Intermediate">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item" data-level="Intermediate">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
                     </div>
-                    <h3>HTML5</h3>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-css3-alt"></i>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="Intermediate">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-item" data-level="Intermediate">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item" data-level="Beginner">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="skill-item" data-level="Beginner">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
                     </div>
-                    <h3>CSS3</h3>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-js-square"></i>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="Advanced">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item" data-level="Advanced">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item" data-level="Intermediate">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-item" data-level="Beginner">
+                            <i class="fas fa-cloud"></i>
+                            <span>REST APIs</span>
+                        </div>
                     </div>
-                    <h3>JavaScript</h3>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <h3>React.js</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <h3>Node.js</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Express.js</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>MySQL</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>MongoDB</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-git-alt"></i>
-                    </div>
-                    <h3>Git</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3>GitHub</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>REST APIs</h3>
-                </div>
-                
-                
             </div>
         </div>
     </section>
@@ -181,79 +157,82 @@ I'm always eager to learn new technologies and take on impactful, real-world pro
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card glass-card">
                     <div class="project-image">
-                        <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Product Store">
+                        <div class="project-placeholder">
+                            <i class="fas fa-store"></i>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Product Store</h3>
-                        <p>A full-stack e-commerce application with user authentication, product management, and shopping cart functionality.</p>
-                        <div class="project-tech">
+                        <h3>ProductStore</h3>
+                        <p>A full-stack e-commerce application built with React, Node.js, and MongoDB featuring product management and user authentication.</p>
+                        <div class="project-stack">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">MongoDB</span>
                         </div>
-                        <div class="project-links">
-                             <!-- <button class="btn btn-primary live-demo-btn" data-project="product-store">
+                        <div class="project-buttons">
+                            <a href="https://productstore-d5s0.onrender.com" target="_blank" class="btn btn-primary">
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
-                            </button> -->
-                            <a href="https://github.com/RajyalakshmiChennuboyina" target="_blank" class="btn btn-secondary">
+                            </a>
+                            <a href="#" class="btn btn-secondary">
                                 <i class="fab fa-github"></i>
                                 GitHub
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+
+                <div class="project-card glass-card">
                     <div class="project-image">
-                        <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Restaurant Website">
+                        <div class="project-placeholder">
+                            <i class="fas fa-utensils"></i>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Restaurant Website</h3>
-                        <p>A responsive restaurant website with menu display, online reservation system, and contact information.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
+                        <h3>FoodBlog Website</h3>
+                        <p>A responsive food blog platform with content management system built using React, Express, and MongoDB.</p>
+                        <div class="project-stack">
                             <span class="tech-tag">React</span>
-                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
                         </div>
-                        <div class="project-links">
-                            <!-- <button class="btn btn-primary live-demo-btn" data-project="product-store">
+                        <div class="project-buttons">
+                            <a href="#" class="btn btn-primary">
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
-                            </button> -->
-                            <div class="d-flex justify-content-center">
-  <a href="https://github.com/RajyalakshmiChennuboyina" target="_blank" class="btn btn-secondary">
-    <i class="fab fa-github"></i> GitHub
-  </a>
-</div>
-
-
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+
+                <div class="project-card glass-card">
                     <div class="project-image">
-                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Portfolio Website">
+                        <div class="project-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Portfolio Website</h3>
-                        <p>A modern, responsive portfolio website showcasing projects, skills, and professional experience.</p>
-                        <div class="project-tech">
+                        <p>A modern, responsive portfolio website showcasing my skills and projects with smooth animations and dark mode support.</p>
+                        <div class="project-stack">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                         </div>
-                        <div class="project-links">
-                            <!-- <button class="btn btn-primary live-demo-btn" data-project="product-store">
+                        <div class="project-buttons">
+                            <a href="#" class="btn btn-primary">
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
-                            </button> -->
-                            <a href="https://github.com/RajyalakshmiChennuboyina" target="_blank" class="btn btn-secondary">
+                            </a>
+                            <a href="#" class="btn btn-secondary">
                                 <i class="fab fa-github"></i>
                                 GitHub
                             </a>
@@ -267,39 +246,39 @@ I'm always eager to learn new technologies and take on impactful, real-world pro
     <!-- Certifications Section -->
     <section id="certifications" class="certifications">
         <div class="container">
-            <h2 class="section-title">Certifications</h2>
+            <h2 class="section-title">Certifications & <span class="gradient-text">Achievements</span></h2>
             <div class="certifications-grid">
-                <div class="cert-card">
+                <div class="cert-card glass-card">
                     <div class="cert-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>NPTEL</h3>
                     <p>Data Structures and Algorithms</p>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card glass-card">
                     <div class="cert-icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3>IBM/EDX</h3>
                     <p>SQL for Data Science</p>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card glass-card">
                     <div class="cert-icon">
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>Udemy</h3>
                     <p>Full Stack Web Development</p>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card glass-card">
                     <div class="cert-icon">
                         <i class="fab fa-python"></i>
                     </div>
                     <h3>HackerRank</h3>
                     <p>Python Programming</p>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card glass-card">
                     <div class="cert-icon">
-                        <i class="fab fa-html5"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>SoloLearn</h3>
                     <p>HTML & CSS</p>
@@ -311,58 +290,48 @@ I'm always eager to learn new technologies and take on impactful, real-world pro
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
             <div class="contact-content">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:chennuboinarajyalakshmi9@gmail.com">chennuboinarajyalakshmi9@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/rajyalakshmi-chennuboina-53b965255" target="_blank">Connect with me</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/RajyalakshmiChennuboyina" target="_blank">View my projects</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Prakasam, Andhra Pradesh, India</p>
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in hearing about new opportunities and projects.</p>
+                    <div class="contact-links">
+                        <a href="mailto:chennuboinarajyalakshmi9@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>chennuboinarajyalakshmi9@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rajyalakshmi-chennuboina-53b965255" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/chennuboyinarajyalakshmi" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                        <div class="contact-link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Prakasam, Andhra Pradesh, India</span>
                         </div>
                     </div>
                 </div>
+                <form class="contact-form glass-card" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -371,34 +340,21 @@ I'm always eager to learn new technologies and take on impactful, real-world pro
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 Rajyalakshmi Chennuboyina. All rights reserved.</p>
-                    <p>Made with <i class="fas fa-heart"></i> by Rajyalakshmi</p>
-                </div>
-                <div class="footer-socials">
-                    <a href="https://www.linkedin.com/in/rajyalakshmi-chennuboina-53b965255" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/RajyalakshmiChennuboyina" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:chennuboinarajyalakshmi9@gmail.com"><i class="fas fa-envelope"></i></a>
+                <p>Made with <i class="fas fa-heart"></i> by Rajyalakshmi</p>
+                <div class="footer-links">
+                    <a href="https://github.com/chennuboyinarajyalakshmi" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rajyalakshmi-chennuboina-53b965255" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:chennuboinarajyalakshmi9@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Project Demo Modal -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content project-modal-content">
-            <span class="close">&times;</span>
-            <h3 id="projectTitle">Project Demo</h3>
-            <div class="demo-input-section">
-                <p>Enter the live demo URL for this project:</p>
-                <input type="url" id="demoUrl" placeholder="https://your-project-demo.com" class="demo-url-input">
-                <div class="demo-actions">
-                    <button class="btn btn-secondary" id="cancelDemo">Cancel</button>
-                    <button class="btn btn-primary" id="openDemo">Open Demo</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
