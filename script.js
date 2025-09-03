@@ -99,8 +99,8 @@ document.addEventListener('DOMContentLoaded', initScrollAnimations);
 function downloadResume() {
     // Download the resume PDF from assets folder
     const a = document.createElement('a');
-    a.href = 'assets/RAJYALAKSHMI CHENNUBOYINA_MERN.pdf';
-    a.download = 'RAJYALAKSHMI CHENNUBOYINA_MERN.pdf';
+    a.href = 'assets/CHENNUBOYINARAJYALAKSHMI_RESUME.pdf';
+    a.download = 'CHENNUBOYINARAJYALAKSHMI_RESUME.pdf';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
